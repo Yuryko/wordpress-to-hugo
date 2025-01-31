@@ -4,8 +4,11 @@
 Plugin Name: WordPress to Hugo Exporter
 Description: Exports WordPress posts, pages, and options as YAML files parsable by Hugo
 Version: 2.0
-Author: Kozlov Yury
+Author: Benjamin J. Balter / Cyrill Schumacher
+Author URI: https://cyrillschumacher.com
 License: GPLv3 or Later
+
+Copyright 2012-2013  Benjamin J. Balter  (email : Ben@Balter.com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License, version 2, as
