@@ -95,11 +95,15 @@ class Hugo_Export
      * Get an array of all post and page IDs
      * Note: We don't use core's get_posts as it doesn't scale as well on large sites
      */
+
+     # добавил в запрос фильтр
     function get_posts()
     {
 
         global $wpdb;
-        return $wpdb->get_col("SELECT ID FROM $wpdb->posts WHERE post_status in ('future', 'publish', 'draft', 'private') AND post_type IN ('post', 'page' )");
+        return $wpdb->get_col("SELECT  ID FROM $wpdb->posts as p INNER JOIN $wpdb->term_relationships AS tr ON (p.ID = tr.object_id AND tr.term_taxonomy_id IN (2))"); 
+
+        # return $wpdb->get_col("SELECT ID FROM $wpdb->posts WHERE post_status in ('future', 'publish', 'draft', 'private') AND post_type IN ('post', 'page' )");
     }
 
     /**
